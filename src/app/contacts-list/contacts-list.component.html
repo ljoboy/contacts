@@ -1,3 +1,30 @@
-<p>
-  contacts-list works!
-</p>
+<div class="row">
+  <div class="offset-md-2 col-md-8">
+    <table class="table table-striped table-hover table-bordered">
+      <thead class="thead-inverse">
+      <tr>
+        <th>#</th>
+        <th>Nom</th>
+        <th>Pr&eacute;nom</th>
+        <th>Postnom</th>
+        <th>Numero</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let contact of contacts">
+        <th scope="row">{{contact.id + 1}}</th>
+        <td>{{(contact.nom == '') ? '-' : contact.nom|uppercase}}</td>
+        <td>{{(contact.prenom == '') ? '-' : contact.prenom|titlecase}}</td>
+        <td>{{(contact.postnom == '') ? '-' : contact.postnom|uppercase}}</td>
+        <td><span *ngFor="let phone of contact.telephones">+{{phone.numero}}&nbsp;&nbsp;</span></td>
+        <td>
+          <a class="blue-text"><i class="fa fa-user"></i></a>
+          <a class="teal-text"><i class="fa fa-pencil"></i></a>
+          <a class="red-text"><i class="fa fa-times"></i></a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
