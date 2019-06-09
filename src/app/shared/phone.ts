@@ -5,20 +5,19 @@ export class Phone implements IPhone {
 
 
   type: ITypes;
-   private _numero: bigint;
+   private _numero: number;
 
 
-  constructor(numero: bigint, type: string = '') {
-    this.type.nomType = type;
+  constructor(numero: number) {
     this._numero = numero;
   }
 
 
-  get numero(): bigint {
+  get numero(): number {
     return this._numero;
   }
 
-  set numero(value: bigint) {
+  set numero(value: number) {
     this._numero = value;
   }
 

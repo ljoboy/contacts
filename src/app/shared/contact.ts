@@ -7,17 +7,17 @@ export class Contact implements IContact {
   cree_le: Date;
   etat: boolean;
   genre: string;
-  id: number;
+  id: number = null;
   img_url: string;
   nom: string;
   postnom: string;
   prenom: string;
-  telephones: Phone[];
-  emails: IEmail[];
-  websites: IWebsite[];
+  telephones: Array<Phone> = new Array<Phone>();
+  emails: Array<IEmail> = new Array<IEmail>();
+  websites: Array<IWebsite> = new Array<IWebsite>();
 
 
-  constructor(numero: bigint, nom: string = '', prenom: string = '', postnom: string = '', genre: string = '', img_url: string = '') {
+  constructor(numero: number, nom: string = '', prenom: string = '', postnom: string = '', genre: string = '', img_url: string = '') {
     this.cree_le = new Date();
     this.etat = true;
     this.genre = genre;
@@ -29,7 +29,7 @@ export class Contact implements IContact {
   }
 
 
-  addTelephone(numero: bigint): void {
+  addTelephone(numero: number): void {
     this.telephones.push(new Phone(numero));
   }
 

@@ -1,6 +1,6 @@
 import {ITypes} from './itypes';
 
 export interface IPhone {
-  numero: bigint;
+  numero: number;
   type: ITypes;
 }
