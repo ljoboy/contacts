@@ -1,6 +1,6 @@
 {
   "name": "ndaku-angular",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -44,5 +44,20 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljoboy/ndaku-front.git"
+  },
+  "keywords": [
+    "Ndaku"
+  ],
+  "author": "Jonathan Yombo Bosemwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ljoboy/ndaku-front/issues"
+  },
+  "homepage": "https://github.com/ljoboy/ndaku-front#readme"
 }
