@@ -7,6 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
+import { AddContactComponent } from './add-contact/add-contact.component';
+import {Routes} from '@angular/router';
+import { AboutComponent } from './about/about.component';
+
+/*const appRoutes: Routes = [
+  {path: 'about'}
+];*/
 
 @NgModule({
   declarations: [
@@ -14,7 +21,9 @@ import { ContactsListComponent } from './contacts-list/contacts-list.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    ContactsListComponent
+    ContactsListComponent,
+    AddContactComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
