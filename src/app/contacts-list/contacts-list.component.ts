@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Contact} from '../shared/contact';
+import {HttpClient} from '@angular/common/http';
+import {ContactsService} from '../../services/contacts.service';
 
 @Component({
   selector: 'app-contacts-list',
@@ -9,17 +11,22 @@ import {Contact} from '../shared/contact';
 export class ContactsListComponent implements OnInit {
 
 
-  contacts: Array<Contact> = new Array<Contact>();
+  contacts: any;
 
 
-  constructor() { }
+  constructor(public http: HttpClient, public contactservices: ContactsService) { }
 
   ngOnInit() {
-    for (let i = 0; i < 100; i++) {
-      const c: Contact = new Contact(Math.floor(Math.random() * 9999999999));
-      c.id = i;
-      this.contacts.push(c);
-    }
+
+  }
+
+  doSearch() {
+    this.contactservices.getContact()
+      .subscribe(data => {
+        this.contacts = data;
+      }, err => {
+        console.log(err);
+      });
   }
 
 }

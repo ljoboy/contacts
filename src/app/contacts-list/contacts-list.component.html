@@ -2,7 +2,7 @@
   <div class="offset-md-2 col-md-8">
     <!--Panel-->
     <div class="card">
-      <h3 class="card-header primary-color white-text">Liste des contacts <a href="#" class="btn-floating btn-large red"><i class="fa fa-plus fa-2x"></i></a></h3>
+      <h3 class="card-header primary-color white-text">Contacts <a href="/add" class="btn-floating btn-large cyan"><i class="fa fa-plus fa-2x"></i></a></h3>
       <div class="card-block">
         <table class="table table-striped table-hover">
           <thead class="thead-inverse">
@@ -17,11 +17,11 @@
           </thead>
           <tbody>
           <tr *ngFor="let contact of contacts">
-            <th scope="row">{{contact.id + 1}}</th>
+            <th scope="row">{{contact.idContact}}</th>
             <td>{{(contact.nom == '') ? '-' : contact.nom|uppercase}}</td>
             <td>{{(contact.prenom == '') ? '-' : contact.prenom|titlecase}}</td>
             <td>{{(contact.postnom == '') ? '-' : contact.postnom|uppercase}}</td>
-            <td><span *ngFor="let phone of contact.telephones">+{{phone.numero}}&nbsp;&nbsp;</span></td>
+            <td>{{(contact.numeros == '') ? '-' : '+'+contact.numeros[0].numero}}</td>
             <td>
               <a class="blue-text"><i class="fa fa-user"></i></a>
               <a class="teal-text"><i class="fa fa-pencil"></i></a>
