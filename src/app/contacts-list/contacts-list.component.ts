@@ -12,6 +12,9 @@ export class ContactsListComponent implements OnInit {
 
 
   contacts: any;
+  mc = '';
+  start = 0;
+  size = 20;
 
 
   constructor(public http: HttpClient, public contactservices: ContactsService) { }
@@ -21,7 +24,7 @@ export class ContactsListComponent implements OnInit {
   }
 
   doSearch() {
-    this.contactservices.getContact()
+    this.contactservices.getContact(this.mc, this.start, this.size)
       .subscribe(data => {
         this.contacts = data;
       }, err => {

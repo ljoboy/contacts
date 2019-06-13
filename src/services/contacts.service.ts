@@ -8,7 +8,13 @@ export class ContactsService {
 
   }
 
-  getContact() {
-    return this.http.get('http://localhost/contacts/api/contactsapi.html?q=&start=');
+  getContact(mc: string, start: number, size: number) {
+    return this.http.get('http://localhost/contacts/api/contactsapi.html?q='
+    + mc +
+      '&size='
+    + size +
+      '&start='
+    + start
+    );
   }
 }
