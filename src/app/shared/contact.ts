@@ -4,20 +4,20 @@ import {IEmail} from './iemail';
 import {IWebsite} from './iwebsite';
 
 export class Contact implements IContact {
-  cree_le: Date;
-  etat: boolean;
+  // cree_le: Date;
+  // etat: boolean;
   genre: string;
-  id: number = null;
+  // id: number = null;
   img_url: string;
   nom: string;
   postnom: string;
   prenom: string;
-  telephones: Array<Phone> = new Array<Phone>();
-  emails: Array<IEmail> = new Array<IEmail>();
-  websites: Array<IWebsite> = new Array<IWebsite>();
+  // telephones: Array<Phone> = new Array<Phone>();
+   // emails: Array<IEmail> = new Array<IEmail>();
+  // websites: Array<IWebsite> = new Array<IWebsite>();
 
 
-  constructor(numero: number, nom: string = '', prenom: string = '', postnom: string = '', genre: string = '', img_url: string = '') {
+  /* constructor(numero: number, nom: string = '', prenom: string = '', postnom: string = '', genre: string = '', img_url: string = '') {
     this.cree_le = new Date();
     this.etat = true;
     this.genre = genre;
@@ -26,10 +26,10 @@ export class Contact implements IContact {
     this.postnom = postnom;
     this.prenom = prenom;
     this.addTelephone(numero);
-  }
+  } */
 
 
-  addTelephone(numero: number): void {
+  /*addTelephone(numero: number): void {
     this.telephones.push(new Phone(numero));
   }
 
@@ -41,5 +41,5 @@ export class Contact implements IContact {
 
   addWebsite(url: string): void {
     this.websites.push({'url': url});
-  }
+  }*/
 }
