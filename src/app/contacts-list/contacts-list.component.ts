@@ -20,7 +20,7 @@ export class ContactsListComponent implements OnInit {
   constructor(public http: HttpClient, public contactservices: ContactsService) { }
 
   ngOnInit() {
-
+    this.doSearch();
   }
 
   doSearch() {
