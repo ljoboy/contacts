@@ -2,9 +2,26 @@
   <div class="offset-md-2 col-md-8">
     <!--Panel-->
     <div class="card">
-      <h3 class="card-header primary-color white-text">Contacts <a href="/add" class="btn-floating btn-large cyan"><i class="fa fa-plus fa-2x"></i></a></h3>
+      <h3 class="card-header primary-color white-text">Contacts </h3>
       <div class="card-block">
-        <table class="table table-striped table-hover">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="form-inline">
+              <div class="md-form form-group">
+                <i class="fa fa-envelope prefix"></i>
+                <input type="text" id="form91" class="form-control" [(ngModel)]="mc" placeholder="Votre recherche ici..."/>
+                <label for="form91"></label>
+              </div>
+              <div class="md-form form-group">
+                <button (click)="chercher()" class="btn btn-primary btn-lg">Chercher</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            Ajouter un contact <a href="/add" class="btn-floating btn-large cyan"><i class="fa fa-plus fa-2x"></i></a>
+          </div>
+        </div>
+        <table class="table table-striped table-hover" style="cursor: pointer;">
           <thead class="thead-inverse">
           <tr>
             <th>#</th>
@@ -21,7 +38,7 @@
             <td>{{(contact.nom == '') ? '-' : contact.nom|uppercase}}</td>
             <td>{{(contact.prenom == '') ? '-' : contact.prenom|titlecase}}</td>
             <td>{{(contact.postnom == '') ? '-' : contact.postnom|uppercase}}</td>
-            <td>{{(contact.numeros == '') ? '-' : '+'+contact.numeros[0].numero}}</td>
+            <td>{{(contact.numeros == '') ? '-' : '+' + contact.numeros[0].numero}}</td>
             <td>
               <a class="blue-text"><i class="fa fa-user"></i></a>
               <a class="teal-text"><i class="fa fa-pencil"></i></a>

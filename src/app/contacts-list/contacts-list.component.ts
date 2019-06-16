@@ -14,7 +14,7 @@ export class ContactsListComponent implements OnInit {
   contacts: any;
   mc = '';
   start = 0;
-  size = 20;
+  size = 10;
 
 
   constructor(public http: HttpClient, public contactservices: ContactsService) { }
@@ -29,7 +29,11 @@ export class ContactsListComponent implements OnInit {
         this.contacts = data;
       }, err => {
         console.log(err);
-      });
+    });
   }
 
+
+  chercher() {
+    this.doSearch();
+  }
 }
