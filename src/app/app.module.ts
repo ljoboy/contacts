@@ -13,6 +13,7 @@ import { AddContactComponent } from './add-contact/add-contact.component';
 import {RouterModule, Routes} from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import {ContactsService} from '../services/contacts.service';
+import {FormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ContactsService],
   bootstrap: [AppComponent]
