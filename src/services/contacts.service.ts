@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {Contact} from '../app/shared/contact';
 
 @Injectable()
 export class ContactsService {
@@ -16,5 +17,10 @@ export class ContactsService {
       '&start='
     + start
     );
+  }
+
+  saveContact(contact: Contact) {
+    console.log(contact);
+    return this.http.post('http://localhost/contacts/api/contactsapi/create_action.html', contact);
   }
 }
